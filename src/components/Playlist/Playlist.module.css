@@ -1,0 +1,6 @@
+.playlist{
+    display: flex;
+    flex-direction: column;
+    padding: .5rem 0;
+    border: 1px solid #ccc;
+}
