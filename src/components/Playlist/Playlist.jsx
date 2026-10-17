@@ -5,7 +5,7 @@ function Playlist() {
 
     return (
         <div className={styles.playlist}>
-            <input defaultValue="New Playlist" />
+            <input placeholder="New Playlist" />
             <Tracklist />
             <button>Save to Spotify</button>
         </div>
