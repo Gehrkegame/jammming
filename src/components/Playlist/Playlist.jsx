@@ -1,12 +1,12 @@
 import Tracklist from '../Tracklist/Tracklist';
 import styles from './Playlist.module.css';
 
-function Playlist() {
+function Playlist({playlistTracks}) {
 
     return (
         <div className={styles.playlist}>
             <input placeholder="New Playlist" />
-            <Tracklist />
+            <Tracklist tracks={playlistTracks}/>
             <button>Save to Spotify</button>
         </div>
     )
