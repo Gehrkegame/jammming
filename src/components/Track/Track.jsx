@@ -1,10 +1,10 @@
 import styles from './Track.module.css';
 
-function Track() {
+function Track({ track }) {
     return(
         <div className={styles.track}>
-            <div><h3>Song Name</h3>
-            <p>Artist|Album</p></div>
+            <div><h3>{track.name}</h3>
+            <p>{ track.artist }| { track.album }</p></div>
             
             <button>+</button>
         </div>
