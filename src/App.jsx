@@ -12,12 +12,18 @@ function App() {
 ];
 const [playlistName, setPlaylistName] = useState('New Playlist');
 const [playlistTracks, setPlaylistTracks] = useState([ { id: 4, name: "Rockstar", artist: "Nickelback", album: "All the Right Reasons" }]);
+const addTrack = (track) => {
+  if (playlistTracks.some(savedTrack => savedTrack.id === track.id)) {
+    return;
+  }
+  setPlaylistTracks([...playlistTracks, track]);
+};
   return(
     <div className="app">
       <h1>Jammming</h1>
       <SearchBar />
       <div className="columns">
-        <SearchResults tracks={tracks}/>
+        <SearchResults tracks={tracks} onAdd={addTrack}/>
         <Playlist playlistName={playlistName} playlistTracks={playlistTracks}/>
       </div>
     </div>
