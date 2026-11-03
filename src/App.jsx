@@ -22,13 +22,16 @@ const addTrack = (track) => {
 const removeTrack = (track) => {
   setPlaylistTracks(playlistTracks.filter(savedTrack => savedTrack.id !== track.id));
 };
+const updatePlaylistName = (name) => {
+  setPlaylistName(name);
+}
   return(
     <div className="app">
       <h1>Jammming</h1>
       <SearchBar />
       <div className="columns">
         <SearchResults tracks={tracks} onAdd={addTrack}/>
-        <Playlist playlistName={playlistName} playlistTracks={playlistTracks} onRemove={removeTrack}/>
+        <Playlist playlistName={playlistName} playlistTracks={playlistTracks} onRemove={removeTrack} onNameChange={updatePlaylistName}/>
       </div>
     </div>
   );
