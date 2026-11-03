@@ -3,6 +3,7 @@ import SearchResults from './components/SearchResults/SearchResults';
 import Playlist from './components/Playlist/Playlist';
 import './App.css';
 import { useState } from 'react';
+import Spotify from './components/util/Spotify';
 
 function App() {
   const tracks = [
